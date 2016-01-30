@@ -1,0 +1,15 @@
+Marry, Boff, Kill: _person1, _person2, _person3
+What would you name the first nuclear bomb you launch at _place1?
+What would the Founding Fathers think of _thing1?
+What are the issues with the recent _verb1 of _thing1?
+What do you think about the recent _thing1 epidemic affecting our children?
+Marry, Boff, Kill: _person1, _person2, _place1
+Marry, Boff, Kill: _person1, _person2, _person3
+Marry, Boff, Kill: _person1, _thing1, _person2
+Rumors say that _person1 will be your vice-president. Care to comment?
+What are your thoughts on the leader of _place1?
+Complete the sentence: “_person1 is…”
+_thing1 and _thing2 are _place1 leaders. How does this make _person1 _verb1?
+Rwandan _thing1 are _verb1 our _thing2!
+Pop _person1, _thing1.
+An infomercial for _thing1 pops up. How does this make you feel?
