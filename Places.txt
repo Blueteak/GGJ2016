@@ -1,4 +1,4 @@
-Tehran
+﻿Tehran
 Baghdad
 Iran
 the Islamic State
@@ -15,7 +15,10 @@ the Moon
 Hot Topic
 the surface of the Sun
 Agrabah
-wherever liberals live
 the borders
 Tordico
 a black hole
+the International Space Station
+Three Mile Island
+Chernobyl
+Benghazi
