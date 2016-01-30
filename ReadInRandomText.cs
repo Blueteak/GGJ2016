@@ -17,13 +17,13 @@ public class ReadInRandomText : MonoBehaviour {
     int counter5 = 0;
     int counter6 = 0;
     int countertimer = 0;
-    Text txt;
+    //Text txt;
     Random rnd;
     //C:\Users\Nick\Desktop\Temp
     // Use this for initialization
     void Start()
     {
-        txt = GetComponent<Text>();
+        //txt = GetComponent<Text>();
         people = new string[100];
         randomQuestions = new string[50];
         things = new string[50];
