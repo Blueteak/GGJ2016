@@ -10,6 +10,8 @@ public class ReadInRandomText : MonoBehaviour {
     string[] things;
     string[] places;
     string[] verbs;
+    string[] badAct;
+	string[] nats;
     List<string> questions;
 
    	public TextAsset peopleText;
@@ -18,6 +20,8 @@ public class ReadInRandomText : MonoBehaviour {
 	public TextAsset placesText;
 	public TextAsset verbsText;
 	public TextAsset questionsText;
+	public TextAsset horribActText;
+	public TextAsset natText;
 
 
     //Text txt;
@@ -33,6 +37,8 @@ public class ReadInRandomText : MonoBehaviour {
 		things = thingsText.text.Split('\n');
 		places = placesText.text.Split('\n');
 		verbs = verbsText.text.Split('\n');
+		badAct = horribActText.text.Split('\n');
+		nats = natText.text.Split('\n');
 		string[] qs = questionsText.text.Split('\n');
 		questions = new List<string>();
 		foreach(var q in qs)
@@ -89,6 +95,13 @@ public class ReadInRandomText : MonoBehaviour {
         cur = cur.Replace("_place1", places[Random.Range(0, verbs.Length)]);
         cur = cur.Replace("_thing1", things[Random.Range(0, things.Length)]);
         cur = cur.Replace("_thing2", things[Random.Range(0, things.Length)]);
+		cur = cur.Replace("_nationality1", nats[Random.Range(0, things.Length)]);
+		cur = cur.Replace("_nationality2", nats[Random.Range(0, things.Length)]);
+		cur = cur.Replace("_concatThing1", "the " + things[Random.Range(0, things.Length)]);
+		cur = cur.Replace("_concatThing2", "the " + things[Random.Range(0, things.Length)]);
+		cur = cur.Replace("_concatThing3", "the " + things[Random.Range(0, things.Length)]);
+		cur = cur.Replace("_horribleAction", badAct[Random.Range(0, things.Length)]);
+		cur = cur.Replace("_person4", people[Random.Range(0, people.Length)]);
         return cur;
     }
 }

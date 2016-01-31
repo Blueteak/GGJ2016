@@ -1438,11 +1438,26 @@ MonoBehaviour:
   - Sara Pail'n
   - Rah'zal Shabul
   - Anchor Fox
-  SideStories: []
-  DumpQuips: []
-  PailQuips: []
-  DevilQuips: []
-  FoxQuips: []
+  SideStories:
+  - Cleaning Products Are Not Alive, Experts Say
+  - War with _place1 Declared
+  - _character Is Definitely Not in Our Office, Holding Us Hostage
+  - _person1 Appointed as Secretary of State
+  - Iowa Hotter Than Usual, Locals Say
+  DumpQuips:
+  - "\u201CI\u2019d like to thank all of my money.\u201D -Tronald Dump "
+  - "\u201CI am making this country great again.\u201D -Tronald Dump"
+  PailQuips:
+  - "*Clatter* - Pail\u2019n"
+  - "\u201CI swept the competition off their feet.\u201D - Pail\u2019n"
+  DevilQuips:
+  - "\u201CThis birth certificate of mine clearly says Iowa.\u201D - Rah'zal Shabul"
+  - "\u201CYes, I am real man.\u201D - Rah'zal Shabul"
+  - "\u201CLaugh with me fellow humans. Ha. Ha. Ha.\u201D - Rah'zal Shabul"
+  FoxQuips:
+  - "\u201CCaw-ca-caw-ca-caw-ca-chaw\u201D - Anchor Fox"
+  - "\u201COur current story: a fox wins the presidency.\u201D - Anchor Fox"
+  - "\u201CBreaking news: you cause cancer.\u201D - Anchor Fox"
   candidates:
   - {fileID: 21300000, guid: c86a685f79a8c42dabdf7789641e223b, type: 3}
   - {fileID: 21300000, guid: 31658a63ce089478f93e5df455626476, type: 3}
