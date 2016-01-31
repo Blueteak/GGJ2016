@@ -48,9 +48,9 @@ public class NetworkDraw : MonoBehaviour {
 				int.TryParse(P[0], out x); int.TryParse(P[1], out y);
 				Vector2 v = new Vector2(x,y);
 				usrs[pid].Draw(v, pid);
-				if(v.x >= 0 && !gs.lost.Contains(pid))
+				if(v.x >= 0 && !gs.lost.Contains(pid) )
 					avatars[pid].isRunning = true;
-				else
+				else if(gs.doneIntro)
 					avatars[pid].isRunning = false;
 			}
 		}

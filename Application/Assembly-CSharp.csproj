@@ -48,6 +48,7 @@
      <Compile Include="Assets\DeathStrings.cs" />
      <Compile Include="Assets\DeviceQuestion.cs" />
      <Compile Include="Assets\Files\ReadInRandomText.cs" />
+     <Compile Include="Assets\Images\EndSequence.cs" />
      <Compile Include="Assets\NetworkScripts\BaseConnect.cs" />
      <Compile Include="Assets\NetworkScripts\BucketWomanSprite.cs" />
      <Compile Include="Assets\NetworkScripts\NetworkDraw.cs" />
@@ -111,6 +112,7 @@
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\SmoothSyncMovement.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\SupportLogger.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
+     <Compile Include="Assets\System\AudioSequence.cs" />
      <Compile Include="Assets\System\DevilSwap.cs" />
      <Compile Include="Assets\System\GameSystem.cs" />
      <Compile Include="Assets\System\NetworkQuestions.cs" />

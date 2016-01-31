@@ -48,7 +48,7 @@ public class TwitchVotes : MonoBehaviour {
 
 	public bool voterQ()
 	{
-		return qs.Count > 0; //&& Random.Range(0, 100) < 20;
+		return qs.Count > 0 && Random.Range(0, 100) < 20;
 	}
 
 	public ChatQuestion getChatQuestion()

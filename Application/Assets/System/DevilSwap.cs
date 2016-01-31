@@ -22,7 +22,7 @@ public class DevilSwap : MonoBehaviour {
 
 	IEnumerator DoS()
 	{
-		if(gs.lost.Contains(2))
+		if(!gs.lost.Contains(2))
 		{
 			normalDevil.SetActive(false);
 			realDevil.SetActive(true);

@@ -19,7 +19,7 @@ public class GameSystem : MonoBehaviour {
 	public EasyTween et;
 
 	bool intro;
-	bool doneIntro;
+	public bool doneIntro;
 
 	public string[] introStrings;
 	public EasyTween[] tweens;
@@ -35,6 +35,10 @@ public class GameSystem : MonoBehaviour {
 	public List<string> WaitMessages;
 
 	public List<string> userQuestions;
+
+	public AudioSequence AudioSq;
+
+	public EndSequence endsq;
 
 	void Start()
 	{
@@ -57,20 +61,11 @@ public class GameSystem : MonoBehaviour {
 			}
 			if(readyForNewQ && doneIntro)
 			{
-				if(Qs > 3 && !inElim)
+				if(Qs > 1 && !inElim)
 				{
-					if(lost.Count == 3)
-					{
-						//End Game
-						inElim = true;
-						EndGame();
-					}
-					else
-					{
-						inElim = true;
-						Elimination();
-						Qs = 0;
-					}
+					inElim = true;
+					Elimination();
+					Qs = 0;
 				}
 				else if(!inElim)
 				{
@@ -90,10 +85,22 @@ public class GameSystem : MonoBehaviour {
 	int lowest = 0;
 	public List<int> lost;
 
+	int winner;
+
 	void EndGame()
 	{
+		if(!lost.Contains(0))
+			winner = 0;
+		else if(!lost.Contains(1))
+			winner = 1;
+		else if(!lost.Contains(2))
+			winner = 2;
+		else if(!lost.Contains(3))
+			winner = 3;
 
+		endsq.StartWinSeq(winner);
 	}
+
 
 	void Elimination()
 	{
@@ -119,11 +126,21 @@ public class GameSystem : MonoBehaviour {
 		elimAnims[lowest].OpenCloseObjectAnimation();
 		yield return new WaitForSeconds(2f);
 		txt.ChangeQ(dstr.getString(lowest));
+		if(lost.Count != 3)
+			AudioSq.NextSong();
 		yield return new WaitForSeconds(4f);
-		txt.ChangeQ("Time for the next round!");
-		yield return new WaitForSeconds(2.5f);
-		et.isRunning = false;
-		inElim = false;
+		if(lost.Count != 3)
+		{
+			txt.ChangeQ("Time for the next round!");
+			tvotes.resetVotes();
+			yield return new WaitForSeconds(2.5f);
+			et.isRunning = false;
+			inElim = false;
+		}
+		else
+		{
+			EndGame();
+		}
 	}
 
 	void DoIntro()
@@ -173,7 +190,6 @@ public class GameSystem : MonoBehaviour {
 		nq.SendQuestion(Q);
 		txt.ChangeQ(Q);
 		tvotes.sendMessage("A new round of voting has started!");
-		tvotes.resetVotes();
 		timerImage.fillAmount = 1;
 		et.isRunning = true;
 		for(int i=0; i<54; i++)

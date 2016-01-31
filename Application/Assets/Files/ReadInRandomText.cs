@@ -52,11 +52,7 @@ public class ReadInRandomText : MonoBehaviour {
     string updateQuestion()
     {
         int r = Random.Range(0, 100);
-        if (r <= 25)
-        {
-           return randomQ(); 
-        }
-        else if(r < 35)
+		 if(r < 63)
         {
         	//Replace with question from audience
         	return randomQ();
@@ -71,6 +67,16 @@ public class ReadInRandomText : MonoBehaviour {
         {
         	return randomQ();
         }
+    }
+
+    public string randomPerson()
+    {
+		return people[Random.Range(0, people.Length)];
+    }
+
+    public string randomPlace()
+    {
+		return places[Random.Range(0, verbs.Length)];
     }
 
     string randomQ()
