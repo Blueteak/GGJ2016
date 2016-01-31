@@ -6,6 +6,8 @@ After every round, the candidate with the least number of votes will be killed .
 so don't be that guy!
 Sure, the system is blatanty corrrupt. But it works.
 
+Now onto our first question.
+
 ---
 
 ﻿The year is divisible by four -- and now, more than ever, is it essential that our party chooses
