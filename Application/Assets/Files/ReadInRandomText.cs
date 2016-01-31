@@ -12,6 +12,7 @@ public class ReadInRandomText : MonoBehaviour {
     string[] verbs;
     string[] badAct;
 	string[] nats;
+	string[] theThings;
     List<string> questions;
 
    	public TextAsset peopleText;
@@ -22,6 +23,7 @@ public class ReadInRandomText : MonoBehaviour {
 	public TextAsset questionsText;
 	public TextAsset horribActText;
 	public TextAsset natText;
+	public TextAsset theThingText;
 
 
     //Text txt;
@@ -39,6 +41,7 @@ public class ReadInRandomText : MonoBehaviour {
 		verbs = verbsText.text.Split('\n');
 		badAct = horribActText.text.Split('\n');
 		nats = natText.text.Split('\n');
+		theThings = theThingText.text.Split('\n');
 		string[] qs = questionsText.text.Split('\n');
 		questions = new List<string>();
 		foreach(var q in qs)
@@ -95,12 +98,12 @@ public class ReadInRandomText : MonoBehaviour {
         cur = cur.Replace("_place1", places[Random.Range(0, verbs.Length)]);
         cur = cur.Replace("_thing1", things[Random.Range(0, things.Length)]);
         cur = cur.Replace("_thing2", things[Random.Range(0, things.Length)]);
-		cur = cur.Replace("_nationality1", nats[Random.Range(0, things.Length)]);
-		cur = cur.Replace("_nationality2", nats[Random.Range(0, things.Length)]);
-		cur = cur.Replace("_concatThing1", "the " + things[Random.Range(0, things.Length)]);
-		cur = cur.Replace("_concatThing2", "the " + things[Random.Range(0, things.Length)]);
-		cur = cur.Replace("_concatThing3", "the " + things[Random.Range(0, things.Length)]);
-		cur = cur.Replace("_horribleAction", badAct[Random.Range(0, things.Length)]);
+		cur = cur.Replace("_nationality1", nats[Random.Range(0, nats.Length)]);
+		cur = cur.Replace("_nationality2", nats[Random.Range(0, nats.Length)]);
+		cur = cur.Replace("_concatThing1", theThings[Random.Range(0, theThings.Length)]);
+		cur = cur.Replace("_concatThing2", theThings[Random.Range(0, theThings.Length)]);
+		cur = cur.Replace("_concatThing3", theThings[Random.Range(0, theThings.Length)]);
+		cur = cur.Replace("_horribleAction", badAct[Random.Range(0, badAct.Length)]);
 		cur = cur.Replace("_person4", people[Random.Range(0, people.Length)]);
         return cur;
     }

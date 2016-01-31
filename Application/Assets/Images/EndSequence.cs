@@ -24,12 +24,12 @@ public class EndSequence : MonoBehaviour {
 	public void StartWinSeq(int idx)
 	{
 		WinPanel.SetActive(true);
-		TitleText.text = PlayerNames[idx] + " wins the Election!";
+		TitleText.text = PlayerNames[idx] + " Wins Election!";
 		cdImage.sprite = candidates[idx];
 
 		SideText.text = replaceString(SideStories[Random.Range(0,SideStories.Length)], idx);
 
-		/*
+
 		if(idx == 0)
 			QuipText.text = DumpQuips[Random.Range(0, DumpQuips.Length)];
 		if(idx == 1)
@@ -38,7 +38,7 @@ public class EndSequence : MonoBehaviour {
 			QuipText.text = DevilQuips[Random.Range(0, DevilQuips.Length)];
 		if(idx == 3)
 			QuipText.text = FoxQuips[Random.Range(0, FoxQuips.Length)];
-		*/
+		
 	}
 
 	public string replaceString(string inpt, int idx)

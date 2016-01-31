@@ -116,24 +116,24 @@ public class GameSystem : MonoBehaviour {
 	{
 		et.isRunning = true;
 		txt.ChangeQ("Round's Over!");
-		yield return new WaitForSeconds(2.5f);
+		yield return new WaitForSeconds(2f);
 		string s = elimStart[Random.Range(0,elimStart.Count)];
 		elimStart.Remove(s);
 		txt.ChangeQ(s);
-		yield return new WaitForSeconds(5f);
+		yield return new WaitForSeconds(3f);
 		txt.ChangeQ("Looks like " + pNames[lowest] + " is going in the stew!");
-		yield return new WaitForSeconds(4f);
+		yield return new WaitForSeconds(3f);
 		elimAnims[lowest].OpenCloseObjectAnimation();
 		yield return new WaitForSeconds(2f);
 		txt.ChangeQ(dstr.getString(lowest));
 		if(lost.Count != 3)
 			AudioSq.NextSong();
-		yield return new WaitForSeconds(4f);
+		yield return new WaitForSeconds(3f);
 		if(lost.Count != 3)
 		{
 			txt.ChangeQ("Time for the next round!");
 			tvotes.resetVotes();
-			yield return new WaitForSeconds(2.5f);
+			yield return new WaitForSeconds(2f);
 			et.isRunning = false;
 			inElim = false;
 		}
@@ -157,7 +157,7 @@ public class GameSystem : MonoBehaviour {
 		foreach(var v in introStrings)
 		{
 			txt.ChangeQ(v);
-			yield return new WaitForSeconds(6f);
+			yield return new WaitForSeconds(4.5f);
 		}
 		foreach(var t in tweens)
 			t.isRunning = false;
