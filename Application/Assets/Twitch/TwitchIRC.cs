@@ -31,15 +31,15 @@ public class TwitchIRC : MonoBehaviour
         }
         var networkStream = sock.GetStream();
         var input = new System.IO.StreamReader(networkStream);
-        var output = new System.IO.StreamWriter(networkStream);
+       	var output = new System.IO.StreamWriter(networkStream);
 
         //Send PASS & NICK.
-        output.WriteLine("PASS " + oauth);
+       	output.WriteLine("PASS " + oauth);
         output.WriteLine("NICK " + nickName.ToLower());
         output.Flush();
 
         //output proc
-        outProc = new System.Threading.Thread(() => IRCOutputProcedure(output));
+       	outProc = new System.Threading.Thread(() => IRCOutputProcedure(output));
         outProc.Start();
         //input proc
         inProc = new System.Threading.Thread(() => IRCInputProcedure(input, networkStream));
@@ -74,6 +74,9 @@ public class TwitchIRC : MonoBehaviour
             if (buffer.Split(' ')[1] == "001")
             {
                 SendCommand("JOIN #" + channelName);
+                SendMsg("To Vote, type 'vote:#', where the # is the candidate number you are voting for (1,2,3 or 4)");
+				SendMsg("To submit a question to the candidates, type 'question:' followed by the question you wish to ask!");
+				Connected();
             }
         }
     }
@@ -123,12 +126,23 @@ public class TwitchIRC : MonoBehaviour
     //MonoBehaviour Events.
     void Start()
     {
+    	DontDestroyOnLoad(gameObject);
     }
+
     void OnEnable()
     {
         stopThreads = false;
-        StartIRC();
+       // StartIRC();
     }
+
+    public void Login(string user, string oAuth)
+    {
+    	oauth = oAuth;
+    	nickName = user;
+    	channelName = user.ToLower();
+    	StartIRC();
+    }
+
     void OnDisable()
     {
         stopThreads = true;
@@ -143,6 +157,11 @@ public class TwitchIRC : MonoBehaviour
         //print("inProc:" + inProc.IsAlive.ToString());
         //print("outProc:" + outProc.IsAlive.ToString());
     }
+
+	public didConnect Connected;
+	public delegate void didConnect();
+
+
     void Update()
     {
         lock (recievedMsgs)
