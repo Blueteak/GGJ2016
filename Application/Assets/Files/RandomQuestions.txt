@@ -1,4 +1,4 @@
-Draw the first nuclear bomb you launch at _place1.
+﻿Draw the first nuclear bomb you launch at _place1.
 What would the Founding Fathers think of _concatThing1?
 What are the issues with the recent _verb1 of _concatThing1?
 What do you think about the recent _thing1 epidemic affecting our children?
@@ -18,3 +18,12 @@ How does _person1 dress when they think nobody is watching?
 Will you be able to beat _person1 in the general election?
 Would you be able to beat _person1 in a fight?
 _nationality1 troops have invaded _place1. How do you respond?
+Sources claim _person1 wants to be the leader of _place1. How do you respond?
+Draw _person1’s worst nightmare.
+According to _person1, you _horribleAction. What is your alibi?How do you respond?
+On this week’s Saturday Night Live, _person1 claimed that you _horribleAction. How do you respond?
+The media claims you are actually _nationality1. Where are your birth records?
+TMZ released footage in which you and _ person1 _horribleAction. Draw your experience.
+THIS SUNDAY NIGHT, _person1 fights _person2 in the WWE SUPERSLAM! ARE YOU READY?!?
+CNN reports that you took a vacation to _place1. How was it?
+What did _person1 give you for your birthday?
