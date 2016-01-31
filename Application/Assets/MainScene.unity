@@ -3880,6 +3880,8 @@ MonoBehaviour:
   placesText: {fileID: 4900000, guid: ce72c281edb5b45b4a39574043faa4b1, type: 3}
   verbsText: {fileID: 4900000, guid: bd560d19dc0f340acae4c0ef5d50acda, type: 3}
   questionsText: {fileID: 4900000, guid: 857a9be4a860f4c349dc2a52a3780066, type: 3}
+  horribActText: {fileID: 4900000, guid: 5ff90fcfa91a842bb880285dc8578b2c, type: 3}
+  natText: {fileID: 4900000, guid: f22c4c6f1b0bb4ed787bb6d2bcaeef13, type: 3}
   UsedQuestions: []
 --- !u!114 &1187496259
 MonoBehaviour:

@@ -62,6 +62,7 @@
      <Compile Include="Assets\UITween\Editor\EditorUITween.cs" />
      <None Include="Assets\Files\Intro.txt" />
      <None Include="Assets\Files\Places.txt" />
+     <None Include="Assets\Files\TheThings.txt" />
      <None Include="Assets\Files\People.txt" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\Files\Questions.txt" />
@@ -70,7 +71,9 @@
      <None Include="Assets\Files\RandomQuestions.txt" />
      <None Include="Assets\Files\Things.txt" />
      <None Include="Assets\Photon Unity Networking\readme.txt" />
+     <None Include="Assets\Files\Nationalities.txt" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
+     <None Include="Assets\Files\Horrible Actions.txt" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/Applications/Unity 5.3/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
